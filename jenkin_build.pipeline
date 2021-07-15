@@ -63,7 +63,8 @@ node('N-0013') {
     stage('build') {
         stage('code-generator-build') {
           try {
-            if (( $FC == "abc" ))
+	    sh '''#!/bin/bash
+            if [ $FC == "abc" ]
             then
               cd $WORKSPACE/jenkins-example/$FC/	
 	      mvn clean install
