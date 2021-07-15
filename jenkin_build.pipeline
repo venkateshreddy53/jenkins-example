@@ -83,7 +83,8 @@ node('N-0013') {
             echo "Failure At: code-generator-build"
           }
         }
-      } else {
+      } 
+      else {
         echo("code-generator-build stage skipped")
       }
     stage ("Publish to Hygieia") {
