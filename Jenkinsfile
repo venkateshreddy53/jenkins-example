@@ -21,12 +21,13 @@ pipeline {
         }
 
 
-   //     stage ('Deployment Stage') {
-   //         steps {
+        stage ('Publish to Hygieia Stage') {
+   
+            steps {
                 //withMaven(maven : 'maven_3_6') {
-   //                 sh 'mvn deploy'
+                    hygieiaBuildPublishStep buildStatus: 'Success'
   //              }
-  //          }
-  //      }
+            }
+        }
     }
 }
