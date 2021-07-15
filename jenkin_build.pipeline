@@ -87,4 +87,6 @@ node('N-0013') {
     stage ("Publish to Hygieia") {
         hygieiaBuildPublishStep buildStatus: 'Success'
     }
+} finally {
+	echo "build successful"
 }
