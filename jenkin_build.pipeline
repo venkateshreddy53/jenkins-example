@@ -63,16 +63,16 @@ node('N-0013') {
         stage('code-generator-build') {
           try {
             sh '''#!/bin/bash
-            if [ $FC == "abc" ]
+            if [[ $FC == "abc" ]]
             then
               cd $WORKSPACE/jenkins-example/$FC/
               mvn clean install
-            elif (( $FC == "mno" ))
+            elif [[ $FC == "mno" ]]
             then
               mvn clean install
               cd $WORKSPACE/jenkins-example/$FC/
               mvn clean install
-            else (( $FC == "xyz" ))
+            else [[ $FC == "xyz" ]]
               mvn clean install
               cd $WORKSPACE/jenkins-example/$FC/
             fi
